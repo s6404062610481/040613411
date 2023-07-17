@@ -23,6 +23,7 @@
             padding: 35px 10px;
             width: 100px;
             /*height: 75px;*/
+            background-color: rgb(214, 211, 211);
         }
         .lastrow{
             width: 150px;
@@ -32,7 +33,18 @@
             width: 100px;
             padding: 0px 12px;
         }
-
+        tr:nth-child(even) {
+            background-color: rgb(230, 228, 228);
+        }
+        tr:nth-child(odd) {
+            background-color: rgb(252, 245, 245);
+        }
+        .name{
+            background-color: rgb(214, 211, 211);
+        }
+        .head{
+            background-color: rgb(230, 228, 228);
+        }
 
     </style>
 
@@ -44,7 +56,7 @@
     <br>
     <table>
         <tr>
-            <th colspan="2" class="terres"></th>
+            <td colspan="2" class="head"></td>
             <th>Name</th>
             <th>Mass<br>(1024kg)</th>
             <th>Diameter<br>(km)</th>
@@ -58,7 +70,7 @@
         </tr>
         <tr>
             <th rowspan="4" colspan="2" class="terres">Terrestrial planets</th>
-            <td><b>Mercury</b></td>
+            <td class="name"><b>Mercury</b></td>
             <td>0.330</td>
             <td>4,879</td>
             <td>5427</td>
@@ -70,7 +82,7 @@
             <td class="lastrow">Closest to the Sun</td>
         </tr>
         <tr>
-            <td><b>Venus</b></td>
+            <td class="name"><b>Venus</b></td>
             <td>4.87</td>
             <td>12,104</td>
             <td>5243</td>
@@ -82,7 +94,7 @@
             <td class="lastrow"></td>
         </tr>
         <tr>
-            <td><b>Earth</b></td>
+            <td class="name"><b>Earth</b></td>
             <td>5.97</td>
             <td>12,756</td>
             <td>5514</td>
@@ -94,7 +106,7 @@
             <td class="lastrow">Our world</td>
         </tr>
         <tr>
-            <td><b>Mars</b></td>
+            <td class="name"><b>Mars</b></td>
             <td>0.642</td>
             <td>6,792</td>
             <td>3933</td>
@@ -108,7 +120,7 @@
         <tr>
             <th rowspan="4" class="terres">Jovian planets</th>
             <th rowspan="2" class="terres">Gas <br> giants</th>
-            <td><b>Jupiter</b></td>
+            <td class="name"><b>Jupiter</b></td>
             <td>1898</td>
             <td>142,984</td>
             <td>1326</td>
@@ -120,7 +132,7 @@
             <td class="lastrow">The largest planet</td>
         </tr>
         <tr>
-            <td><b>Saturn</b></td>
+            <td class="name"><b>Saturn</b></td>
             <td>568</td>
             <td>120,536</td>
             <td>687</td>
@@ -133,7 +145,7 @@
         </tr>
         <tr>
             <th rowspan="2" class="terres">Ice <br> giants</th>
-            <td><b>Uranus</b></td>
+            <td class="name"><b>Uranus</b></td>
             <td>86.8</td>
             <td>51,118</td>
             <td>1271</td>
@@ -145,7 +157,7 @@
             <td class="lastrow"></td>
         </tr>
         <tr>
-            <td><b>Neptune</b></td>
+            <td class="name"><b>Neptune</b></td>
             <td>102</td>
             <td>49,528</td>
             <td>1638</td>
@@ -158,7 +170,7 @@
         </tr>
         <tr>
             <th colspan="2" class="terres">Dwarf planets</th>
-            <td><b>Pluto</b></td>
+            <td class="name"><b>Pluto</b></td>
             <td>0.0146</td>
             <td>2,370</td>
             <td>2095</td>
