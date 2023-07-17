@@ -42,6 +42,8 @@
         }
         .name{
             background-color: rgb(214, 211, 211);
+            border-left: 3px solid #333;
+            border-right: 3px solid #333;
         }
         .head{
             background-color: rgb(230, 228, 228);
@@ -62,7 +64,10 @@
     <table>
         <tr>
             <td colspan="2" class="head"></td>
-            <th>Name</th>
+            <th style="border-left: 3px solid #333;
+            border-right: 3px solid #333;
+            border-top: 3px solid #333;
+            ">Name</th>
             <th>Mass<br>(10<sup>24</sup>kg)</th>
             <th>Diameter<br>(km)</th>
             <th>Density<br>(kg/m<sup>3</sup>)</th>
@@ -175,7 +180,7 @@
         </tr>
         <tr>
             <th colspan="2">Dwarf planets</th>
-            <td class="name"><b>Pluto</b></td>
+            <td class="name" style="border-bottom: 3px solid #333;"><b>Pluto</b></td>
             <td>0.0146</td>
             <td>2,370</td>
             <td>2095</td>
