@@ -1,0 +1,31 @@
+Test Case
+no.1
+1.1 aei Y
+1.2 kodsds N
+1.3 125 N 
+1.4 oia11 N
+1.5 ieo Y
+no.2
+2.1 Bigc Y
+2.2 MoD N 
+2.3 Mam125 N
+2.4 154Daddy N
+2.5 Teaeiei Y
+no.3
+3.1 ord12345 Y
+3.2 orerd N
+3.3 ord55555 Y
+3.4 order98454555 N
+3.5 orderr74141 N
+no.4
+4.1 frog Y
+4.2 blog Y
+4.3 brog N
+4.4 fgog N
+4.5 clog Y
+no.5
+5.1 64-040626-1048-1 Y
+5.2 63-406026-2154-0 N
+5.3 64-040626-2158-6 Y
+5.4 5487421021455 N
+5.5 63-125484-5481-8 N

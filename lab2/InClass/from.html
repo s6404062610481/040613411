@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>workshop2</title>
+</head>
+<body>
+    <form action="form-echo.php" method="post">
+    <h1>Form pattern attibutes testing</h1>
+
+    <hr>
+
+    <input type="text"
+            name="username"
+            placeholder="Username"
+            pattern="[a-z]{1,15}"
+            title="Username should only contain lowercase letters. e.g. john"
+        >
+
+    <h3>1.เป็นสระในภาษาอังกฤษเท่านั้นและมีได้ 3 ตัว</h3>
+
+    <input type="text" name="No1" pattern="[aeiouAEIOU]{3}">
+
+    <h3>2.ขึ้นต้นด้วยตัวพิมพ์ใหญ่ ที่เหลือเป็นอักษรพิมพ์เล็กตั้งแต่ 1 ตัวขึ้นไป</h3>
+
+    <input type="text" name="No2" pattern="[A-Z][a-z]+">
+
+    <h3>3.ขึ้นต้นคำด้วย ord หรือ order ลงท้ายด้วยตัวเลข 5 ตัว</h3>
+
+    <input type="text" name="No3" pattern="(ord|order)[0-9]{5}">
+
+    <h3>4.เป็นคำว่า frog หรือ blog หรือ clog</h3>
+
+    <input type="text" name="No4" pattern="[fbc][rl]og">
+
+    <h3>BONUS. เป็นรหัสนักศึกษา cs เท่านั้น</h3>
+
+    <input type="text" name="Bonus" pattern="[0-9]{2}-0406[0-9]{2}-[0-9]{4}-[0-9]{1}">
+
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
