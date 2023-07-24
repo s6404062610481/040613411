@@ -45,7 +45,24 @@
         <fieldset>
             <legend>ข้อมูลเข้าสู่ระบบ</legend>
             <label for="">Username:</label><br>
-            <input type="text" name="" id="" pattern="">
+            <input type="text" name="" id="" pattern="\w{8,}"><br>
+            <label><i>ประกอบด้วยตัวเลข ตัวอักษร หรือ _ ตั้งแต่ 8 ตัวขึ้นไป</i></label>
+            <br><br>
+
+            <label for="">Password :</label><br>
+            <input type="password" pattern="\w{8,}"><br>
+            <label><i>ประกอบด้วยตัวอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i></label>
+        
+        </fieldset>
+
+<br>
+        <fieldset>
+            <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+            <label for="">แพคเก็จทัวร์ : 
+                <select name="" id="">
+                    <option value="">--select--</option>
+                </select>
+            </label>
         </fieldset>
 
     </form>
