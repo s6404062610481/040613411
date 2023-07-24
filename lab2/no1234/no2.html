@@ -10,7 +10,7 @@
             border-bottom: 1px solid black;
             border-left: 1px solid black;
             border-right: 1px solid black;
-            width: 400px;
+            width: 500px;
             margin: 0 auto;
             padding: 1rem;
         }
@@ -31,13 +31,13 @@
         <fieldset>
             <legend>ข้อมูลทั่วไป</legend>
             <label for="">ชื่อ-สกุล:</label><br>
-            <input type="text" name="" id="" placeholder="กรอกชื่อ-สกุล" pattern="\w{1,}"><br>
+            <input type="text" name="" id="" placeholder="กรอกชื่อ-สกุล" pattern="\w{1,}" required> *<br>
             
             <label for="">Email :</label><br>
-            <input type="email"><br>
+            <input type="email"> *<br>
 
             <label for="">โทรศัพท์ :</label><br>
-            <input type="text" name="" id="" pattern=""><br>
+            <input type="text" name="" id="" pattern="^+66" value="+66"> *<br>
 
             <label for="">ที่อยู่:</label><br>
             <textarea name="" id="" cols="30" rows="3"></textarea><br>
@@ -67,6 +67,11 @@
             <label for="">แพคเก็จทัวร์ : 
                 <select name="" id="">
                     <option value="">--select--</option>
+                    <option value="">South Korea</option>
+                    <option value="">Japan</option>
+                    <option value="">Norway</option>
+                    <option value="">France</option>
+                    <option value="">Peru</option>
                 </select>
             </label><br>
 
@@ -74,7 +79,7 @@
                 <input type="date" name="" id="">
             </label><br>
 
-            <label for="">จำนวนผู้เดินทาง : <input type="text" name="" id="" size="3"></label><br>
+            <label for="">จำนวนผู้เดินทาง : <input type="text" name="" id="" size="3" pattern="[0-9]{1,10}"></label><br>
 
             <label for="">เน้นการท่องเที่ยวแบบใด?</label><br>
             <input type="checkbox" name="" id=""><label for=""> ชอปปิ้ง</label><br>
@@ -84,7 +89,7 @@
         </fieldset>
 
 <br>
-        <label for="">ยอมรับเงื่อนไขและข้อตกลง <input type="radio" name="" id=""> I agree <input type="radio" name="" id=""> I disagree  <input type="submit" value="จอง"></label>
+        <label for="">ยอมรับเงื่อนไขและข้อตกลง <input type="radio" name="" id="" checked> I agree <input type="radio" name="" id=""> I disagree &ensp; <input type="submit" value="จอง"></label>
 
     </form>
     
