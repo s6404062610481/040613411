@@ -14,6 +14,12 @@
             margin: 0 auto;
             padding: 1rem;
         }
+        select{
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 100px;
+        }
 
     </style>
 
@@ -62,8 +68,23 @@
                 <select name="" id="">
                     <option value="">--select--</option>
                 </select>
-            </label>
+            </label><br>
+
+            <label for="">วันที่เดินทาง :
+                <input type="date" name="" id="">
+            </label><br>
+
+            <label for="">จำนวนผู้เดินทาง : <input type="text" name="" id="" size="3"></label><br>
+
+            <label for="">เน้นการท่องเที่ยวแบบใด?</label><br>
+            <input type="checkbox" name="" id=""><label for=""> ชอปปิ้ง</label><br>
+            <input type="checkbox" name="" id=""><label for=""> ธรรมชาติ</label><br>
+            <input type="checkbox" name="" id=""><label for=""> ทะเล</label>
+
         </fieldset>
+
+<br>
+        <label for="">ยอมรับเงื่อนไขและข้อตกลง <input type="radio" name="" id=""> I agree <input type="radio" name="" id=""> I disagree  <input type="submit" value="จอง"></label>
 
     </form>
     
