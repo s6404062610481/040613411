@@ -19,24 +19,24 @@
 <body>
 
     <h1>เข้าสู่ระบบ</h1>
-
+    
     <table>
         <tr>
             <th>Username:</th>
-            <th><input type="text" name="" id="" pattern="\w{1,}"></th>
+            <th><input type="text" name="username" id="" pattern="\w{1,}"></th>
         </tr>
         <tr>
             <th>Password:</th>
-            <th><input type="password" name="" id="" pattern="\w{1,}"></th>
+            <th><input type="password" name="password" id="" pattern="\w{1,}"></th>
         </tr>
         <tr>
             <td colspan="2">กรุณาพิมพ์ตามตัวเลขที่ปรากฏ:1599
-                <input type="text" name="" id="" pattern="^1599">
+                <input type="text" name="verify" id="" pattern="^1599">
             </td>
         </tr>
     </table>
     <br>
-    <input type="submit" value="Login">
+    <input type="submit" value="Login" name="submit" onclick="window.location.href='no3.1.html'">
 
 </body>
 </html>
