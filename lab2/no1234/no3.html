@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Exercise</title>
+
+    <style>
+        table,tr,th{
+            border: 1px solid black;
+            width: 150px;
+        }
+        td{
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>เข้าสู่ระบบ</h1>
+
+    <table>
+        <tr>
+            <th>Username:</th>
+            <th><input type="text" name="" id="" pattern="\w{1,}"></th>
+        </tr>
+        <tr>
+            <th>Password:</th>
+            <th><input type="password" name="" id="" pattern="\w{1,}"></th>
+        </tr>
+        <tr>
+            <td colspan="2">กรุณาพิมพ์ตามตัวเลขที่ปรากฏ:1599
+                <input type="text" name="" id="" pattern="^1599">
+            </td>
+        </tr>
+    </table>
+    <br>
+    <input type="submit" value="Login">
+
+</body>
+</html>
