@@ -2,37 +2,38 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<style>
-		.menu {
+		nav {
 			background-color: black;
 			color: white;
 			text-align: center;
 		}
-		.content {
+		article {
 			background-color: gainsboro;
 
 		}
-		.ads {
+		footer {
 			background-color: cornflowerblue;
 
 		}
 		@media screen and (min-width : 481px){
-			.flex { display: flex; }
-			.menu { width: 30%; }
-			.content { width: 60%; }
-			.ads { width: 10%; }
+			section { display: flex; }
+			nav { width: 30%; }
+			article { width: 60%; }
+			footer { width: 10%; }
 		}
 		@media screen and (max-width : 480px) {
-		.flex{
-				display: block;
-		}	
+		    section{
+				display: flex;
+                flex-direction: column;
+		    }	
 		}
 	</style>
 </head>
 <body>
-	<div class="flex">
-		<div class="menu">Menu1<br>Menu2<br>Menu3<br></div>
-		<div class="content">In publishing, art, and communication, … as speech, writing or any of various arts".</div>
-		<div class="ads">advertising<br>advertising<br>advertising<br></div>
-	</div>
+	<section>
+		<nav>Menu1<br>Menu2<br>Menu3<br></nav>
+		<article>In publishing, art, and communication, … as speech, writing or any of various arts".</article>
+		<footer>advertising<br>advertising<br>advertising<br></footer>
+	</section>
 </body>
 </html>
