@@ -8,13 +8,15 @@
 
     <script>
         function checkPassword() {
-            pass1 = pass1;
-            pass2 = pass2;
-            if(pass1==pass2){
-                console.log('Correat')
+            var pass1 = document.getElementById('pass1');
+            valida_pass1 = pass1.value;
+            var pass2 = document.getElementById('pass2');
+            valida_pass2 = pass2.value;
+            if(valida_pass1==valida_pass2){
+                console.log('Correat');
             }
             else{
-                console.log('Incorrect')
+                console.log('Incorrect');
             }
         }
     </script>
