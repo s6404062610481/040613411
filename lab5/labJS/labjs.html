@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabJS</title>
+    <script>
+        let student = [
+            {
+                fullname: 'นายตั้งใจ เรียนมาก',
+                age: 18,
+                year: 1,
+                gpa: 3.40,
+                help: true
+            },
+            {
+                fullname: 'นายส่งงาน ตลอดมา',
+                age: 19,
+                year: 2,
+                gpa: 3.00,
+                help: false
+            },
+            {
+                fullname: 'นางสาวใส่ใจ ดีงาม',
+                age: 20,
+                year: 3,
+                gpa: 2.90,
+                help: true
+            }
+        ]
+        let result = [false, false, false];
+            //console.log(student[0].fullname)
+        for(let i = 0 ; i < student.length ; i++){
+
+            if(student[i].age==18){
+                student[i].age = 2546;
+            }
+            else if(student[i].age==19){
+                student[i].age = 2545;
+            }
+            else if(student[i].age==20){
+                student[i].age = 2544;
+            }
+            if (student[i].gpa>=3.20){
+                console.log(student[i].fullname +' เกิดเมื่อปี '+ student[i].age + 'ได้รับทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์' + 'และยังช่วยงานภาควิชาด้วย');
+                result[i] = true;
+            }
+            else if(student[i].year>=2&&student[i].gpa>=2.75&&student[i].help==true){
+                console.log(student[i].fullname +' เกิดเมื่อปี '+ student[i].age + 'ได้รับทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์' + 'และยังช่วยงานภาควิชาด้วย');
+                result[i] = true;
+            }
+            else{
+                console.log(student[i].fullname +' เกิดเมื่อปี '+ student[i].age + 'ไม่ได้รับทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์' + 'และยังไม่ได้ช่วยงานภาควิชา')
+                result[i] = false;
+            }
+
+        }
+        //console.log(result)
+        for(let i = 0 ; i < result.length ; i++){
+                console.log('ชั้นปีที่ ' + student[i].year)
+                if(result[i] != false){
+                    console.log(student[i].fullname + ' เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย')
+                }
+                else{
+                    console.log('ไม่มี')
+                }
+            }
+        
+        
+        
+
+    </script>
+</head>
+</html>
