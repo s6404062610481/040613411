@@ -24,11 +24,11 @@
 
             if(valida_pass1==valida_pass2){
                 var result = document.getElementById('errormsg');
-                result.appendChild(validaCor);
+                result.appendChild(validaCor).style.color = 'green';
             }
             else{
                 var result = document.getElementById('errormsg');
-                result.appendChild(validaIncor);
+                result.appendChild(validaIncor).style.color = 'red';
             }
         }
     </script>
