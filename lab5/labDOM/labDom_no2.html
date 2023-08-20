@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script>
+        function changecolor(){
+            var change_name = document.getElementById('name').style.color = 'green'
+            var change_name = document.getElementById('age').style.color = 'green'
+            var change_name = document.getElementById('birth').style.color = 'green'
+        }
+    </script>
 </head>
 <body>
+
+    Name : <input type="text" id="name" onchange="changecolor()"><br>
+    Age : <input type="text" id="age" size="4" ><br>
+    Birthdate : <input type="text" id="birth" size="10">
     
 </body>
 </html>
