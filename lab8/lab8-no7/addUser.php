@@ -1,25 +1,52 @@
-<?php 
-    include "conection.php"
-?> 
 
 <?php
+include "conection.php";
+// Include the database configuration file 
+ 
+$statusMsg = ''; 
+ 
+// File upload directory 
+$targetDir = "img/"; 
+ 
+if(isset($_POST["submit"])){ 
+    if(!empty($_FILES["file"]["name"])){ 
+        $fileName = basename($_FILES["file"]["name"]); 
+        $targetFilePath = $targetDir . $fileName; 
+        $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION); 
 
-    $stmt = $pdo->prepare("INSERT INTO member
-    
-    VALUES (?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bindParam(1, $_POST["username"]);
-    $stmt->bindParam(2, $_POST["password"]);
-    $stmt->bindParam(3, $_POST["name"]);
-    $stmt->bindParam(4, $_POST["address"]);
-    $stmt->bindParam(5, $_POST["mobile"]);
-    $stmt->bindParam(6, $_POST["email"]);
-    $stmt->bindParam(7, $_POST["img"]);
-    $stmt->execute(); // เริ่มเพิ่มข้อมูล // ขอคีย์หลักที่เพิ่มส าเร็จ
-    
-    ?>
-    <html>
-    <head><meta charset="UTF-8"></head>
-    <body>
-    เพิ่มสมาชิกสำเร็จ
-    </body>
-</html>
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $name = $_POST['name'];
+        $address = $_POST['address'];
+        $mobile = $_POST['mobile'];
+        $email = $_POST['email'];
+     
+        // Allow certain file formats 
+        $allowTypes = array('jpg','png','jpeg','gif'); 
+        if(in_array($fileType, $allowTypes)){ 
+            // Upload file to server 
+            if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){ 
+                // Insert image file name into database 
+                $insert = $pdo->query("INSERT INTO member 
+                (username, password, name, address, mobile, email, img) 
+                VALUES ('$username', '$password', '$name', '$address', '$mobile', '$email','".$fileName."')"); 
+                if($insert){ 
+                    $statusMsg = "The file ".$fileName. " has been uploaded successfully."; 
+                }else{ 
+                    $statusMsg = "File upload failed, please try again."; 
+                }  
+            }else{ 
+                $statusMsg = "Sorry, there was an error uploading your file."; 
+            } 
+        }else{ 
+            $statusMsg = 'Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.'; 
+        } 
+    }else{ 
+        $statusMsg = 'Please select a file to upload.'; 
+    } 
+} 
+ 
+// Display status message 
+echo $statusMsg; 
+        
+?>
