@@ -8,11 +8,14 @@
         let result = document.getElementById('result') // ดงึ <ul> เพื่อใช้ในการเพมแท ิ่ ก็ <li>
 
         for (let i = 0; i < objectData.features.length; i++) {
-            let content = i+1 + '. ' + objectData.features[i].properties.name + '(' + objectData.features[i].properties.num_bed + ')'// ดงขึ ้อมูลจาก object
+            if(objectData.features[i].properties.num_bed <= 100){
+                let content = i+1 + '. ' + objectData.features[i].properties.name + '(' + objectData.features[i].properties.num_bed + ' เตียง)'// ดงขึ ้อมูลจาก object
             
-            let li = document.createElement('li') // สร้างแทก็ <li>
-            li.innerHTML = content // นําข้อมูลทจี
-            result.appendChild(li) // เพมแท ิ่ ก็ <li> ใหม่
+            
+                let li = document.createElement('div') // สร้างแทก็ <li>
+                li.innerHTML = content // นําข้อมูลทจี
+                result.appendChild(li) // เพมแท ิ่ ก็ <li> ใหม่
+            }
         }
     }
     getDataFromAPI() // เรียกฟังก์ชัน
@@ -21,5 +24,5 @@
 <body>
 <h1>จำนวนหนี้สินเฉลี่ยต่อครัวเรือน จ.ขอนแก่น พ.ศ. 2539-2556</h1>
 
-<ul id="result"></ul>
+<div id="result"></div>
 </body></html>
